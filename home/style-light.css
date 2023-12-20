@@ -89,10 +89,13 @@ nav a:hover {
     align-items: center;
 }
 
-.logo>img {
+.logo>a>img {
+    transition: all .3s;
     height: 70px;
 }
-
+.logo>a>img:hover{
+    transform: scale(1.2);
+}
 .logo>p {
     margin: 0 10px;
 }
