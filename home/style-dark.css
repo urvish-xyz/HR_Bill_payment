@@ -136,6 +136,17 @@ section>h2 {
     /* Adjust color as needed */
 }
 
+#share-button {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #3498db;
+}
+
 footer {
     background-color: #3498db;
     color: #fff;
@@ -146,7 +157,7 @@ footer {
 }
 
 .copy {
-    font-size: 10px;
+    font-size: 13px;
     margin: 0;
     margin-left: 20px;
     padding: 0;

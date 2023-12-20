@@ -1,3 +1,4 @@
+// Navbar code
 document.addEventListener('DOMContentLoaded', function () {
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
     const navLinks = document.querySelector('.nav-links');
@@ -8,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// Theme change code
 document.addEventListener('DOMContentLoaded', function () {
     const stylesheet = document.getElementById('stylesheet');
     const toggleButton = document.getElementById('toggle-theme');
@@ -29,3 +31,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+// Share button code
+document.addEventListener('DOMContentLoaded', function () {
+    const shareButton = document.getElementById('share-button');
+
+    if (navigator.share) {
+        // Web Share API is supported
+        shareButton.addEventListener('click', function () {
+            navigator.share({
+                title: 'Your Website',
+                text: 'Check out this awesome website!',
+                url: window.location.href
+            })
+                .then(() => console.log('Shared successfully'))
+                .catch((error) => console.error('Error sharing:', error));
+        });
+    } else {
+        // Web Share API is not supported, provide a fallback
+        shareButton.addEventListener('click', function () {
+            // You can implement your custom share logic here for unsupported browsers
+            alert('Sharing is not supported on this browser.');
+        });
+    }
+});
